@@ -68,7 +68,7 @@ This project uses internal react-jsonschema-form extension mechanism, through ui
 The simplest example of using it out of the box, is like this:
 
 ```js
-import Form from "react-jsonschema-form";
+import Form from "@rjsf/core";
 import fields from "react-jsonschema-form-extras";
 
 ReactDOM.render(
@@ -81,7 +81,7 @@ ReactDOM.render(
 If you have additional extensions, that are not part of this project, you can enable them, like this
 
 ```js
-import Form from "react-jsonschema-form";
+import Form from "@rjsf/core";
 import otherFields from "other-fields";
 import fields from "react-jsonschema-form-extras";
 
@@ -97,7 +97,7 @@ ReactDOM.render(
 You can load only one field you need if want to keep the bundle small.
 
 ```js
-import Form from "react-jsonschema-form";
+import Form from "@rjsf/core";
 import { TypeaheadField } from "react-jsonschema-form-extras/lib/TypeaheadField";
 
 ReactDOM.render(
@@ -110,7 +110,7 @@ ReactDOM.render(
 If you want multiple fields:
 
 ```js
-import Form from "react-jsonschema-form";
+import Form from "@rjsf/core";
 import { TypeaheadField } from "react-jsonschema-form-extras/lib/TypeaheadField";
 import ReactDatePicker from "react-jsonschema-form-extras/lib/ReactDatePicker";
 

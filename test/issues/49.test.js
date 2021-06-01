@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "react-jsonschema-form";
+import Form from "@rjsf/core";
 import fields from "../../src";
 import renderer from "react-test-renderer";
 
@@ -7,8 +7,8 @@ const formData = {
   orders: [
     { order: "sdw" },
     { order: "Metabolic Panel" },
-    { order: "CAT, Head with contrast" },
-  ],
+    { order: "CAT, Head with contrast" }
+  ]
 };
 
 const schema = {
@@ -22,12 +22,12 @@ const schema = {
         properties: {
           order: {
             type: "string",
-            title: "Order",
-          },
-        },
-      },
-    },
-  },
+            title: "Order"
+          }
+        }
+      }
+    }
+  }
 };
 
 const uiSchema = {
@@ -39,9 +39,9 @@ const uiSchema = {
       field: "table",
       collapsed: false,
       icon: {
-        add: "glyphicon glyphicon-plus-sign glyPhiconGreen",
+        add: "glyphicon glyphicon-plus-sign glyPhiconGreen"
       },
-      addTo: "self",
+      addTo: "self"
     },
     table: {
       leftActions: [
@@ -50,8 +50,8 @@ const uiSchema = {
           className: "col-md-1",
           columnClassName: "col-md-1",
           editColumnClassName: "col-md-1",
-          icon: "glyphicon glyphicon-minus",
-        },
+          icon: "glyphicon glyphicon-minus"
+        }
       ],
       rightActions: [
         {
@@ -59,11 +59,11 @@ const uiSchema = {
           className: "col-md-1",
           columnClassName: "col-md-1",
           editColumnClassName: "col-md-1",
-          icon: "glyphicon glyphicon-minus",
-        },
-      ],
-    },
-  },
+          icon: "glyphicon glyphicon-minus"
+        }
+      ]
+    }
+  }
 };
 
 test.skip("left and right panels", () => {

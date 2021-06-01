@@ -1,11 +1,11 @@
 import "./rAF";
 import React from "react";
-import Form from "react-jsonschema-form";
+import Form from "@rjsf/core";
 import fields from "../src";
 import renderer from "react-test-renderer";
 
 let formData = {
-  compArr: [{ name: "other" }],
+  compArr: [{ name: "other" }]
 };
 
 let schema = {
@@ -16,11 +16,11 @@ let schema = {
       items: {
         type: "object",
         properties: {
-          name: { type: "string" },
-        },
-      },
-    },
-  },
+          name: { type: "string" }
+        }
+      }
+    }
+  }
 };
 
 let uiSchema = {
@@ -31,9 +31,9 @@ let uiSchema = {
     typeahead: {
       options: [{ name: "some" }, { name: "other" }],
       labelKey: "name",
-      minLength: 1,
-    },
-  },
+      minLength: 1
+    }
+  }
 };
 
 test.skip("CompositeArray render", () => {

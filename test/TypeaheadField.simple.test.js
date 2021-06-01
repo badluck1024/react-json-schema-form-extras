@@ -1,6 +1,6 @@
 import "./rAF";
 import React from "react";
-import Form from "react-jsonschema-form";
+import Form from "@rjsf/core";
 import fields from "../src";
 import renderer from "react-test-renderer";
 
@@ -8,37 +8,37 @@ let formData = {
   str: "some",
   strArr: ["some"],
   obj: { name: "other" },
-  objArr: [{ name: "other" }],
+  objArr: [{ name: "other" }]
 };
 
 let schema = {
   type: "object",
   properties: {
     str: {
-      type: "string",
+      type: "string"
     },
     strArr: {
       type: "array",
       items: {
-        type: "string",
-      },
+        type: "string"
+      }
     },
     obj: {
       type: "object",
       properties: {
-        name: { type: "string" },
-      },
+        name: { type: "string" }
+      }
     },
     objArr: {
       type: "array",
       items: {
         type: "object",
         properties: {
-          name: { type: "string" },
-        },
-      },
-    },
-  },
+          name: { type: "string" }
+        }
+      }
+    }
+  }
 };
 
 let fieldProps = {
@@ -47,15 +47,15 @@ let fieldProps = {
   typeahead: {
     options: [{ name: "some" }, { name: "other" }],
     labelKey: "name",
-    minLength: 1,
-  },
+    minLength: 1
+  }
 };
 
 let uiSchema = {
   str: fieldProps,
   strArr: fieldProps,
   obj: fieldProps,
-  objArr: fieldProps,
+  objArr: fieldProps
 };
 
 test.skip("Typeahead render", () => {

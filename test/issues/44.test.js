@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "react-jsonschema-form";
+import Form from "@rjsf/core";
 import fields from "../../src";
 import renderer from "react-test-renderer";
 
@@ -15,41 +15,41 @@ const schema = {
         type: "object",
         properties: {
           drugId: {
-            type: "string",
+            type: "string"
           },
           drugName: {
             type: "string",
-            title: "Drug Name",
+            title: "Drug Name"
           },
           dosage: {
             type: "string",
-            title: "Dosage",
+            title: "Dosage"
           },
           quantity: {
             type: "string",
-            title: "Quantity",
+            title: "Quantity"
           },
           unit: {
             type: "string",
-            title: "Units",
+            title: "Units"
           },
           refills: {
             type: "string",
-            title: "Refills",
+            title: "Refills"
           },
           useGeneric: {
             default: true,
             type: "boolean",
-            title: "Use Generic",
+            title: "Use Generic"
           },
           startDate: {
             type: "date",
-            title: "Start Date",
-          },
-        },
-      },
-    },
-  },
+            title: "Start Date"
+          }
+        }
+      }
+    }
+  }
 };
 
 const uiSchema = {
@@ -58,16 +58,16 @@ const uiSchema = {
     "ui:field": "table",
     table: {
       selectRow: {
-        clickToExpand: true,
+        clickToExpand: true
       },
       tableCols: [
         {
           dataField: "drugId",
-          hidden: true,
-        },
-      ],
-    },
-  },
+          hidden: true
+        }
+      ]
+    }
+  }
 };
 
 const formData = {
@@ -75,9 +75,9 @@ const formData = {
     {
       useGeneric: true,
       drugName: "AmLactin Distribution Pack (pramoxine) 1 %-12 % topical kit",
-      drugId: 471154,
-    },
-  ],
+      drugId: 471154
+    }
+  ]
 };
 
 test.skip("table medications", () => {

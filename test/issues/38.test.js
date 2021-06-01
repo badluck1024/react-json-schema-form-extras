@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "react-jsonschema-form";
+import Form from "@rjsf/core";
 import fields from "../../src";
 import renderer from "react-test-renderer";
 
@@ -17,44 +17,44 @@ const schema = {
           useGeneric: {
             default: true,
             type: "boolean",
-            title: "Use Generic",
+            title: "Use Generic"
           },
           quantity: {
             type: "string",
-            title: "Quantity",
+            title: "Quantity"
           },
           drug: {
             type: "object",
             properties: {
               drugId: {
-                type: "string",
+                type: "string"
               },
               drugName: {
                 type: "string",
-                title: "Drug Name",
-              },
-            },
+                title: "Drug Name"
+              }
+            }
           },
           dosage: {
             type: "string",
-            title: "Dosage",
+            title: "Dosage"
           },
           startDate: {
             type: "date",
-            title: "Start Date",
+            title: "Start Date"
           },
           refills: {
             type: "string",
-            title: "Refills",
+            title: "Refills"
           },
           unit: {
             type: "string",
-            title: "Units",
-          },
-        },
-      },
-    },
-  },
+            title: "Units"
+          }
+        }
+      }
+    }
+  }
 };
 
 const uiSchema = {
@@ -66,29 +66,29 @@ const uiSchema = {
       tableCols: [
         {
           dataField: "drug",
-          dataFormat: "drugName",
+          dataFormat: "drugName"
         },
         {
-          dataField: "dosage",
+          dataField: "dosage"
         },
         {
-          dataField: "quantity",
+          dataField: "quantity"
         },
         {
-          dataField: "unit",
+          dataField: "unit"
         },
         {
-          dataField: "refills",
+          dataField: "refills"
         },
         {
-          dataField: "useGeneric",
+          dataField: "useGeneric"
         },
         {
-          dataField: "startDate",
-        },
-      ],
-    },
-  },
+          dataField: "startDate"
+        }
+      ]
+    }
+  }
 };
 
 const formData = {
@@ -96,9 +96,9 @@ const formData = {
     {
       useGeneric: true,
       drugName: "AmLactin Distribution Pack (pramoxine) 1 %-12 % topical kit",
-      drugId: 471154,
-    },
-  ],
+      drugId: 471154
+    }
+  ]
 };
 
 test.skip("table order", () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "react-jsonschema-form";
+import Form from "@rjsf/core";
 import fields from "../../src";
 import renderer from "react-test-renderer";
 
@@ -18,9 +18,9 @@ const schema = {
   required: ["student"],
   properties: {
     student: {
-      title: "Students First/Last Name",
-    },
-  },
+      title: "Students First/Last Name"
+    }
+  }
 };
 
 const uiSchema = {
@@ -29,9 +29,9 @@ const uiSchema = {
     typeahead: {
       placeholder: "Search Students...",
       options: [{ id: "A", label: "Alex" }, { id: "B", label: "Bart" }],
-      minLength: 2,
-    },
-  },
+      minLength: 2
+    }
+  }
 };
 
 test("label rendered for typeahead", () => {

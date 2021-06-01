@@ -1,10 +1,10 @@
 import React from "react";
-import DefaultDescriptionField from "react-jsonschema-form/lib/components/fields/DescriptionField";
+import DefaultDescriptionField from "@rjsf/core/lib/components/fields/DescriptionField";
 import {
   isMultiSelect,
   getUiOptions,
-  isFilesArray,
-} from "react-jsonschema-form/lib/utils";
+  isFilesArray
+} from "@rjsf/core/lib/utils";
 
 const REQUIRED_FIELD_SYMBOL = "*";
 
@@ -30,7 +30,7 @@ export function DefaultLabel({
   id,
   name,
   fields = {},
-  formContext,
+  formContext
 }) {
   const uiOptions = getUiOptions(uiSchema);
   let { label: displayLabel = true, forceLabelDisplay } = uiOptions;
@@ -63,7 +63,7 @@ export function DefaultLabel({
         />
       ) : (
         undefined
-      ),
+      )
     ];
   }
 

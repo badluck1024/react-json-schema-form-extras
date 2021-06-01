@@ -1,7 +1,7 @@
 import React from "react";
 
 import fields from "../../src/index";
-import Form from "react-jsonschema-form";
+import Form from "@rjsf/core";
 
 import typeahead from "./order";
 import medications from "./medications";
@@ -33,21 +33,21 @@ const ALL_CONFS = [
   simpleLabel,
   aTypeahead,
   formContextField,
-  procedureCodes,
+  procedureCodes
 ];
 
 export default function App() {
   let handleChange = ({ formData }) => console.log(JSON.stringify(formData));
   let formContext = {
     legends: {
-      LanguageLegend: props => <h1>Expected {props.language} characters</h1>,
+      LanguageLegend: props => <h1>Expected {props.language} characters</h1>
     },
     allActions: {
       SignatureComponent: props => <SignatureCheckbox {...props} />,
       Button: props => (
         <a className="btn btn-info pull-right">Update allergies</a>
-      ),
-    },
+      )
+    }
   };
 
   return (
