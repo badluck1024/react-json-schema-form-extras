@@ -48,7 +48,8 @@
     "react-bootstrap-table": "^4.x",
     "react-bootstrap-typeahead": "^3.3.2",
     "react-day-picker": "^7.x",
-    "react-rte": "^0.15.0"
+    "react-rte": "^0.15.0",
+    "html-to-react": "^1.4.5"
   },
   "dependencies": {
     "classnames": "^2.2.6",
