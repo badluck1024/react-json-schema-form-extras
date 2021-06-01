@@ -57,7 +57,6 @@
     "html-to-draftjs": "^1.4.0",
     "lodash.debounce": "^4.0.8",
     "react-draft-wysiwyg": "^1.12.13",
-    "react-render-html": "^0.6.0",
     "selectn": "^1.1.2"
   },
   "devDependencies": {
